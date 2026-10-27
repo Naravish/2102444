@@ -1,17 +1,17 @@
 #include <SPI.h>
 #include <MFRC522.h>
 
-#define RST_PIN 5
+#define RST_PIN A0
 #define SS_PIN  53
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);
   SPI.begin();
   mfrc522.PCD_Init();
-  
+  S
   Serial.println(F("RFID reader initialized. Scan your card/tag..."));
 }
 

@@ -19,7 +19,7 @@ void setup() {
     Serial.println("Couldn't find RTC module.");
     while (1); 
   }
-
+  
   if (rtc.lostPower()) {
     Serial.println("RTC lost power, setting time to compile time...");
     
